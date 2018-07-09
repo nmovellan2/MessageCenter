@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleMessageCenter"
+             xmlns:viewmodel ="clr-namespace:SampleMessageCenter.ViewModel"
+             x:Class="SampleMessageCenter.MainPage">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel x:Name="contexto"/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <!-- Place new controls here -->
+    	<Label BindingContext="{x:Reference Edad}" Text="{Binding Value}" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Stepper x:Name="Edad" Value="{Binding Age}" Increment="5" />
+    </StackLayout>
+
+</ContentPage>
